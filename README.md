@@ -10,21 +10,21 @@ Rules:
 - Each cell can contain only a 0 or a 1
 - There can be no more than two similar numbers below or next to each other
 - Each row and each column is unique
-- Each row and each columns contains as many zeros as ones
+- Each row and each column contains as many zeros as ones
 
 Some links concerning these binary puzzles:
 - http://www.binarypuzzle.com/
 - https://lovattspuzzles.com/2014/02/17/binary-puzzle-video-tutorial/
 
 ## Program execution
-clone the repo, then
+clone the repo, then;
 ```sh
 $ go build bp.go
 $ ./bp
 Usage: ./bp puzzle-filename, or
        ./bp -p puzzle-number
 ```
-Solve one of the built-in puzzles
+Solve one of the built-in puzzles:
 ```sh
 $ ./bp -p 4
 Reading predefined puzzle nmbr '4'
@@ -111,11 +111,11 @@ $ ./bp puzzles/your_puzzle.txt
 ```
 
 ## Logic
-The solver uses deep learning AI techniques. NO, scratch that! The solver uses bruto force to run over all possible (valid) board combinations starting from the top left, over all the rows (horizontal) and down (vertical), It backtracks when the board becomes invalid.
+The solver uses deep learning AI techniques. NO, scratch that! The solver uses brute force to run over all possible board combinations starting from the top left, over all the rows (horizontal) and down (vertical), It backtracks when the board becomes invalid.
 
 ## Shortcomings
 - The solver applies no heuristics
-  - example: when 2 adjacent cells contain zeroes, the cells to the left and right of those can only be ones
+  - example: when 2 adjacent cells contain zeros, the cells to the left and right of those can only be ones
 - The solver stops after finding 1 solution
 - If the puzzle input is illegal, for example a puzzle with 3 zeroes in one row, the
 solver will only notice this after exhausting all possibilities, which can take a long time
